@@ -21,7 +21,7 @@ def about():
 @app.route('/blacklist', methods=['POST'])
 def blacklist():
 	print request.form['ip']
-	#requests.post('http://httpbin.org/post', data = {'key':request.form['ip']})
+	requests.post('192.168.1.24:6363', data = {'ip':request.form['ip']})
 	return 'Submitted IP ' + request.form['ip'];
 
 if __name__ == '__main__':
